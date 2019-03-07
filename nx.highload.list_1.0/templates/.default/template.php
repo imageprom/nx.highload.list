@@ -11,6 +11,14 @@ $this->setFrameMode(true);
 		<?foreach ($arResult['ITEMS'] as $code => $arItem):?>
 		  <div class="nx-hib-element">
 		  	<b>Элемент <?=$arItem['ID']?></b>
+
+			<?if($arItem['FILE']):?>
+				<a href="<?=$arItem['FILE']['SRC']?>" class="file" data-src="<?=$arItem['FILE']['FORMAT']?>" target="_blank">
+					<u><?=$arItem['UF_NAME']?></u>
+					<small><?=$arItem['FILE']['SIZE']?> <?=$arItem['FILE']['UNIT']?></small>
+				</a>
+			<?endif;?>
+
 		   	<pre>
 		   		<?print_r($arItem)?>
 			</pre>
