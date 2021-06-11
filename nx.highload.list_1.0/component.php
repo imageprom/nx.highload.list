@@ -183,8 +183,8 @@ if($arParams['AJAX']) {
 	$APPLICATION->RestartBuffer();
 	while(ob_end_clean());
 	header('Content-Type: application/json; charset='.LANG_CHARSET);
-	CMain::FinalActions();
 	echo $json;
+	CMain::FinalActions();
 	die();
 }
 ?>
